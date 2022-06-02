@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use Illuminate\Http\Request;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -17,8 +17,18 @@ class HomeController extends Controller
 
         //method 3 create model
         $allCategories = Category::all();
+        // $latestPosts = Post::latest()->get();
+        $posts = Post::when(request('category_id'), function ($query) {
+            $query->where('category_id', request('category_id'));
+        })
+            ->latest()
+            ->get();
 
 
-        return view('index', ['categories' => $allCategories]);
+
+        return view('index', [
+            'categories' => $allCategories,
+            'posts' => $posts
+        ]);
     }
 }
