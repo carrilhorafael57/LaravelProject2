@@ -15,7 +15,7 @@
             <div class="row">
                 <!-- Blog entries-->
                 <div class="col-lg-8">
-                    <!-- Nested row for no-featured blog posts-->
+                    <!-- Nested row for no-feaatured blog posts-->
                     <div class="row">
                         @foreach ($posts as $post)
                         <div class="col-lg-6">
