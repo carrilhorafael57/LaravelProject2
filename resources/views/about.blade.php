@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Page header with logoo and tagline-->
+    <!-- Page header with logo and tagline-->
     <header class="py-5 bg-light border-bottom mb-4">
         <div class="container">
             <div class="text-center my-5">
