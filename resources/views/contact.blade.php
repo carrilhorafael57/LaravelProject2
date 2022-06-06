@@ -10,7 +10,7 @@
             </div>
         </div>
     </header>
-    <!-- Page content-->
+    <!-- Page conntent-->
     <div class="container">
         <div class="row">
             <!-- Blog entries-->
